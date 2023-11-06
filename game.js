@@ -1,49 +1,43 @@
-const greater = document.getElementById("greater-than")
-const equal = document.getElementById("equal-to")
-const lesser = document.getElementById("lesser-than")
-const timer = document.getElementById("timer")
+const greater=document.getElementById("greater-than")
+const equal=document.getElementById("equal-to")
+const lesser=document.getElementById("lesser-than")
+const timer=document.getElementById("timer")
 // Iteration 2: Generate 2 random number and display it on the screen
 function generateRandom(){
-    num1 = Math.round(Math.random()*100)
-    num2 = Math.round(Math.random()*100)
+    num1=Math.round(Math.random()*100)
+    num2=Math.round(Math.random()*100)
     
-    number1.innerText = num1
-    number2.innerText = num2
+    number1.innerText=num1
+    number2.innerText=num2
 }
 generateRandom();
 startTimer();
 // Iteration 3: Make the options button functional
 let score =0;
-greater.onclick = ()=>{
+greater.onclick=()=>{
     if(num1<=num2){
-        location.href = 'gameover.html'
+        location.href='gameover.html'
     }
     else{
         score++
         resetTimer(timerID)
-        // localStorage.clear
-        // localStorage.setItem("score",score);
         generateRandom();
     } 
 }
-equal.onclick = ()=>{
+equal.onclick=()=>{
     if(num1 != num2){
-        location.href = 'gameover.html'
+        location.href='gameover.html'
     } else{
         score++
         resetTimer(timerID)
-        // localStorage.clear
-        // localStorage.setItem("score",score);
         generateRandom();
-    }XMLDocument
+    }
 }
-lesser.onclick = ()=>{
+lesser.onclick=()=>{
     if(num1>=num2){
-        location.href = 'gameover.html'
+        location.href='gameover.html'
     } else{
         score++
-        // localStorage.clear
-        // localStorage.setItem("score",score);
         resetTimer(timerID)
         generateRandom();
     }
